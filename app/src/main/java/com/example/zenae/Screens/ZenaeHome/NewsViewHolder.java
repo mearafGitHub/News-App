@@ -2,6 +2,7 @@ package com.example.zenae.Screens.ZenaeHome;
 
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -14,7 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class NewsViewHolder extends RecyclerView.ViewHolder {
-    public RelativeLayout newItemContainer;
+    public LinearLayout newItemContainer;
 
     @BindView(R.id.newsTitle)
     public TextView title;
