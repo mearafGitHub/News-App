@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
 
-</selector>
+    <item android:drawable="@android:color/black" />
+    <item>
+        <ImageView
+
+            android:gravity="center"
+            android:src="@drawable/ic_undraw_ask_me_anything_k8o0" />
+    </item>
+</layer-list>

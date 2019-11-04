@@ -1,4 +1,4 @@
-package com.example.zenae.Screens;
+package com.example.zenae.Screens.Splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 

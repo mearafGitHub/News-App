@@ -4,9 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+
+    android:clickable="true"
     android:layout_marginHorizontal="7dp"
     android:layout_marginVertical="4dp"
     android:elevation="21dp"
+    android:id="@+id/newItemContainer"
     >
 
 <LinearLayout

@@ -5,14 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Screens.NewsAllActivity"
+    tools:context=".Screens.ZenaeHome.HomeActivity"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/colorPrimary"
-        app:title="All News"
+        app:title="Home of News"
+        android:elevation="21dp"
         app:titleTextColor="@color/textWhite"
         />
 
