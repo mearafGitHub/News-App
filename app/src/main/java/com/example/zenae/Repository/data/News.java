@@ -1,28 +1,44 @@
-package com.example.zenae.Screens.ZenaeHome;
+package com.example.zenae.Repository.data;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+import org.joda.time.DateTime;
+
+@Entity(tableName = "news")
 public class News {
-    public String Title;
+
+    @PrimaryKey
+    @NonNull
+    public String title;
     public String brief;
     public String detail;
     public String publisher;
     public String date;
     public int newsImage;
 
-    public News(String title, String brief, String detail, String publisher, String date, int newsImage) {
-        Title = title;
+    @Ignore
+    public News(){
+
+    }
+
+    public News(String title, String brief, String detail, String publisher, int newsImage) {
+        this.title = title;
         this.brief = brief;
         this.detail = detail;
         this.publisher = publisher;
-        this.date = date;
+        this.date = new DateTime().toString();
         this.newsImage = newsImage;
     }
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        title = title;
     }
 
     public String getBrief() {

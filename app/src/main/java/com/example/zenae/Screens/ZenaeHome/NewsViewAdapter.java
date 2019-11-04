@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.zenae.R;
+import com.example.zenae.Repository.data.News;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,6 @@ public class NewsViewAdapter extends RecyclerView.Adapter<NewsViewHolder> {
     LayoutInflater inflater;
 
     public NewsViewAdapter(Context context, List<News> newses) {
-
         this.context = context;
         newsList = new ArrayList<>(newses) ;
         newsList = newses;
@@ -41,13 +41,13 @@ public class NewsViewAdapter extends RecyclerView.Adapter<NewsViewHolder> {
 
         News news = newsList.get(position);
 
-        holder.newItemContainer.setAnimation(AnimationUtils.loadAnimation(context, R.anim.list_fade_anim));
+        holder.newsItemContainer.setAnimation(AnimationUtils.loadAnimation(context, R.anim.list_fade_anim));
         holder.title.setText(news.getTitle());
+        holder.newsComposerLabel.setText("Writer: ");
         holder.newsComposerName.setText(news.getPublisher());
         holder.newsDate.setText(news.getDate());
         holder.brief.setText(news.getBrief());
         holder.newsImage.setImageResource(news.getNewsImage());
-
     }
 
     @Override

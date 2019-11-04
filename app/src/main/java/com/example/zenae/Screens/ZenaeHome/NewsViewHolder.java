@@ -15,7 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class NewsViewHolder extends RecyclerView.ViewHolder {
-    public LinearLayout newItemContainer;
+    public LinearLayout newsItemContainer;
 
     @BindView(R.id.newsTitle)
     public TextView title;
@@ -46,6 +46,6 @@ public class NewsViewHolder extends RecyclerView.ViewHolder {
         newsComposerLabel = itemView.findViewById(R.id.newsComposerLabel);
         newsComposerName = itemView.findViewById(R.id.newsComposerName);
         newsImage = itemView.findViewById(R.id.newsImage);
-        newItemContainer = itemView.findViewById(R.id.newItemContainer);
+        newsItemContainer = itemView.findViewById(R.id.newsItemContainer);
     }
 }
