@@ -9,6 +9,7 @@ import android.os.Handler;
 
 import com.example.zenae.MainActivity;
 import com.example.zenae.R;
+import com.example.zenae.Screens.SignUpActivity;
 import com.example.zenae.Screens.ZenaeHome.HomeActivity;
 import com.example.zenae.framework.base.BaseActivity;
 
@@ -24,8 +25,8 @@ public class SplashActivity extends BaseActivity {
                 .add(R.id.splashContainer, new SplashFragment())
                 .commit();
 
-        startActivity(new Intent(this, HomeActivity.class));
+        startActivity(new Intent(this, SignUpActivity.class));
     }
-    
+
 }
 
