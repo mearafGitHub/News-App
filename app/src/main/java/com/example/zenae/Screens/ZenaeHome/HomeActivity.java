@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 
 import com.example.zenae.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -23,8 +24,8 @@ public class HomeActivity extends AppCompatActivity {
     NewsViewAdapter newsViewAdapter;
     List<News> newses;
 
-    @BindView(R.id.newItemContainer)
-    LinearLayout newItemContainer;
+   /* @BindView(R.id.newItemContainer)
+    LinearLayout newItemContainer;*/
 
 
     @Override
@@ -33,14 +34,24 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
         initRecycler();
+        newses = new ArrayList<>();
     }
 
     private void initRecycler() {
+        newses = fakeNewsData();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         newsRecyclerView.setLayoutManager(linearLayoutManager);
         newsViewAdapter = new NewsViewAdapter(this, newses);
         newsRecyclerView.setAdapter(newsViewAdapter);
     }
+
+    public List<News> fakeNewsData() {
+        newses.add("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
+                "Algezira", "04/11,2019", R.drawable.ic_undraw_newspaper_k72w);
+
+    }
+
+
 
 }
 

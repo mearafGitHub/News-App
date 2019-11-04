@@ -1,5 +1,6 @@
 package com.example.zenae.Screens.Splash;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,22 +9,23 @@ import android.os.Handler;
 
 import com.example.zenae.MainActivity;
 import com.example.zenae.R;
+import com.example.zenae.Screens.ZenaeHome.HomeActivity;
+import com.example.zenae.framework.base.BaseActivity;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        new Handler().postDelayed(new Runnable() {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.splashContainer, new SplashFragment())
+                .commit();
 
-            @Override
-            public void run() {
-                Intent i = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        }, 3000);
+        startActivity(new Intent(this, HomeActivity.class));
     }
+    
 }
+

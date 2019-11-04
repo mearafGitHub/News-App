@@ -17,13 +17,14 @@ import java.util.List;
 public class NewsViewAdapter extends RecyclerView.Adapter<NewsViewHolder> {
 
     Context context;
-    List<News> newsList = new ArrayList<>();
+    List<News> newsList;
     LayoutInflater inflater;
 
     public NewsViewAdapter(Context context, List<News> newses) {
 
         this.context = context;
-        this.newsList = newses;
+        newsList = new ArrayList<>(newses) ;
+        newsList = newses;
         inflater = LayoutInflater.from(context);
     }
 

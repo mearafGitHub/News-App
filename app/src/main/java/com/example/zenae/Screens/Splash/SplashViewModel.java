@@ -8,6 +8,8 @@ import androidx.lifecycle.ViewModel;
 public class SplashViewModel extends ViewModel {
     private MutableLiveData<Boolean> state;
 
+
+
     public SplashViewModel() {
         state = new MutableLiveData<>();
         start();
@@ -15,7 +17,7 @@ public class SplashViewModel extends ViewModel {
 
     private void start() {
         Handler handler = new Handler();
-               // handler.postDelayed(Runnable r, 3000 );
+        handler.postDelayed(() -> state.setValue(true), 4000);
     }
 
     public MutableLiveData<Boolean> getState() {

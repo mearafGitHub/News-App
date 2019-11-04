@@ -1,12 +1,12 @@
 package com.example.zenae.Screens.ZenaeHome;
 
 public class News {
-    private String Title;
-    private String brief;
-    private String detail;
-    private String publisher;
-    private String date;
-    private int newsImage;
+    public String Title;
+    public String brief;
+    public String detail;
+    public String publisher;
+    public String date;
+    public int newsImage;
 
     public News(String title, String brief, String detail, String publisher, String date, int newsImage) {
         Title = title;
