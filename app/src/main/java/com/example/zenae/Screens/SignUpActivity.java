@@ -15,21 +15,20 @@ import butterknife.ButterKnife;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    @BindView(R.id.loginButton)
-    Button loginButton;
+    @BindView(R.id.signupButton)
+    Button signupButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         ButterKnife.bind(this);
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        signupButton = findViewById(R.id.signupButton);
+        signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
-
             }
         });
     }
