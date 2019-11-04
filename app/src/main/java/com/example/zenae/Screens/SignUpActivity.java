@@ -45,7 +45,6 @@ public class SignUpActivity extends BaseActivity {
         signupButton = findViewById(R.id.signupButton);
 
         username = findViewById(R.id.username);
-
         password = findViewById(R.id.password);
         confirmedpassword = findViewById(R.id.confirmedpassword);
 
@@ -83,7 +82,4 @@ public class SignUpActivity extends BaseActivity {
 
     }
 
-    public  void loginUser(){
-
-    }
 }
