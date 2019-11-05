@@ -17,73 +17,67 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class HomeActivity extends BaseActivity {
-
     @BindView(R.id.allNewsRecycler)
     RecyclerView newsRecyclerView;
-
     public List<News> newses;
-
     NewsViewAdapter newsViewAdapter;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
-
         newses = new ArrayList<>();
-
         initRecycler();
     }
 
     private void initRecycler() {
+        // HomeViewModel.fakeNewsData();
 
-        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
-                "Algezira", R.drawable.ic_undraw_newspaper_k72w));
-
-        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
-                "Algezira",  R.drawable.ic_undraw_newspaper_k72w));
-
-        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
-                "Algezira", R.drawable.ic_undraw_newspaper_k72w));
-
-        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
-                "Algezira", R.drawable.ic_undraw_newspaper_k72w));
-
-        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
-                "Algezira", R.drawable.ic_undraw_newspaper_k72w));
-
-        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
-                "Algezira", R.drawable.ic_undraw_newspaper_k72w));
+        newses.add(new News("Brexit", "This is the brief description about the news. This is the brief description about the news. This is the brief description about the news. ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
+                "Algezira", R.drawable.ic_undraw_happy_news_hxmt));
 
         newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
                 "Algezira",  R.drawable.ic_undraw_newspaper_k72w));
 
         newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
-                "Algezira",R.drawable.ic_undraw_newspaper_k72w));
+                "Algezira", R.drawable.ic_undraw_ask_me_anything_k8o0));
 
-        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
+        newses.add(new News("Brexit", "This is the brief description about the news. This is the brief description about the news. This is the brief description about the news.  ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
                 "Algezira", R.drawable.ic_undraw_newspaper_k72w));
 
         newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
-                "Algezira", R.drawable.ic_undraw_newspaper_k72w));
+                "Algezira", R.drawable.ic_undraw_happy_news_hxmt));
 
         newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
-                "Algezira", R.drawable.ic_undraw_newspaper_k72w));
+                "Algezira", R.drawable.ic_undraw_ask_me_anything_k8o0));
 
-        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
+        newses.add(new News("Brexit", "This is the brief description about the news. This is the brief description about the news. This is the brief description about the news.  ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
                 "Algezira",  R.drawable.ic_undraw_newspaper_k72w));
 
         newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
+                "Algezira",R.drawable.ic_undraw_ask_me_anything_k8o0));
+
+        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
+                "Algezira", R.drawable.ic_undraw_ask_me_anything_k8o0));
+
+        newses.add(new News("Brexit", "This is the brief description about the news. This is the brief description about the news. This is the brief description about the news.  ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
+                "Algezira", R.drawable.ic_undraw_happy_news_hxmt));
+
+        newses.add(new News("Brexit", "This is the brief description about the news. This is the brief description about the news. This is the brief description about the news. ! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
                 "Algezira", R.drawable.ic_undraw_newspaper_k72w));
 
-       // HomeViewModel.fakeNewsData();
+        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
+                "Algezira",  R.drawable.ic_undraw_happy_news_hxmt));
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        newsRecyclerView.setLayoutManager(linearLayoutManager);
+        newses.add(new News("Brexit", "Britain apologised! ", "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.",
+                "Algezira", R.drawable.ic_undraw_ask_me_anything_k8o0));
+
+
         newsViewAdapter = new NewsViewAdapter(this, newses);
         newsRecyclerView.setAdapter(newsViewAdapter);
+        newsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
     }
 
 
